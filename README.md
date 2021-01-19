@@ -1,6 +1,16 @@
 
 # Check Point CloudGuard Gateway - IBM VPC Custom Image
 
+## About
+This template will provide a Check Point security gateway image in the "Custom images" repository for a given region. Follow the deployment guide below for instructions on how to deploy a new machine using this method.
+
+## Check Point Resources
+- Check Point knowledgebase article for IBM Cloud VPC deployments [SK170400](https://supportcenter.checkpoint.com/supportcenter/portal?eventSubmit_doGoviewsolutiondetails=&solutionid=sk170400&partition=Basic&product=Security).
+- Check Point [Custom Image Deployment Guide](https://supportcenter.checkpoint.com/supportcenter/portal?action=portlets.DCFileAction&eventSubmit_doGetdcdetails=&fileid=110938)
+
+## Deployment Prerequisites 
+- None
+
 ## Deployment Parameters
 | Deploymenmt Parameter | Description |
 |-----------------------|-------------|
@@ -20,6 +30,8 @@
 To list the available regions, run the following command: ```ibmcloud is regions```
 
 ## IBM Cloud VPC Deployment Profiles
+### Note: For gateway deployments it is recommended to use profiles from the compute family.
+
 | Profile   | Archetecture | Family     | vCPUs | Memory (GB) | Network Performance (Gbps)|       
 |-----------|--------------|------------|-------|-------------|---------------------------|
 |bx2-2x8    |     amd64    |   balanced |  2    |   8         |  4   |
@@ -38,9 +50,6 @@ To list the available regions, run the following command: ```ibmcloud is regions
 |mx2-8x64   |     amd64    |   memory   |  8    |   64        |  16  |  
 |mx2-16x128 |     amd64    |   memory   |  16   |   128       |  32  |  
 |mx2-32x256 |     amd64    |   memory   |  32   |   256       |  64  |  
-
-## Check Point Knowledgebase
-Click [HERE](https://checkpoint.com/) to view the knowledgebase article for IBM Cloud VPC deployments on the Check Point Usercenter.
 
 ## About Check Point Software Technologies Ltd.
 Check Point Software Technologies Ltd. (www.checkpoint.com) is a leading provider of cyber security solutions to governments and corporate <br> 
